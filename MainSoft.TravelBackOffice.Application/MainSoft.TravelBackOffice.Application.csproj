@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MainSoft.TravelBackOffice.Entities\MainSoft.TravelBackOffice.Entities.csproj" />
+    <ProjectReference Include="..\MainSoft.TravelBackOffice.Infraestructure\MainSoft.TravelBackOffice.Infraestructure.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,4 +1,6 @@
-﻿using MainSoft.TravelBackOffice.Infraestructure.Base;
+﻿using MainSoft.TravelBackOffice.Application.Core;
+using MainSoft.TravelBackOffice.Application.Core.Implementation;
+using MainSoft.TravelBackOffice.Infraestructure.Base;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,7 +23,7 @@ namespace Leal.Core.CargaPuntos.Application.WepApi
 
             #endregion REPOSITORY
 
-            //services.AddTransient<IAutenticacionBaseServicio, AutenticacionBaseServicio>();
+            services.AddTransient<IAutoresManager, AutoresManager>();
 
         }
     }

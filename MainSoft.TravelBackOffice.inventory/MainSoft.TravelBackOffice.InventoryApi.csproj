@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MainSoft.TravelBackOffice.Application\MainSoft.TravelBackOffice.Application.csproj" />
     <ProjectReference Include="..\MainSoft.TravelBackOffice.Infraestructure\MainSoft.TravelBackOffice.Infraestructure.csproj" />
   </ItemGroup>
 

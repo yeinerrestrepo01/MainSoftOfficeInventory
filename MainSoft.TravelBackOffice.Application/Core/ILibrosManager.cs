@@ -4,10 +4,9 @@ using MainSoft.TravelBackOffice.Entities.Models;
 namespace MainSoft.TravelBackOffice.Application.Core
 {
     /// <summary>
-    /// Interface de defincion de metodos para la gestion de Autores
+    /// Interface de defincion de metodos para la gestion de Libros
     /// </summary>
-    public interface IAutoresManager : IEntityManager<Autores>
+    internal interface ILibrosManager : IEntityManager<Libros>
     {
-
     }
 }

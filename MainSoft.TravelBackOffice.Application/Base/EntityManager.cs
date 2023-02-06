@@ -17,21 +17,37 @@ namespace MainSoft.TravelBackOffice.Application.Base
             _repository = repository;
         }
 
+        /// <summary>
+        /// Meotodo para realizar la confirmacion de la transaccion de la base de datos realiza
+        /// </summary>
         public virtual void Commit()
         {
             _unitOfWork.Commit();
         }
 
+        /// <summary>
+        /// Meotodo para realizar la confirmacion de la transaccion de la base de datos realiza
+        /// de manera asincrona
+        /// </summary>
         public async virtual Task CommitAsync()
         {
             await _unitOfWork.CommitAsync();
         }
-
+        /// <summary>
+        /// Metodo encargado de realizar el proceso de delete
+        /// de item de la tabla configurada en el repositorio generico
+        /// </summary>
+        /// <param name="entity">Entidad a Eliminar</param>
         public virtual void Delete(T entity)
         {
             Check(entity);
             _repository.Delete(entity);
         }
+        /// <summary>
+        /// Metodo encargado de realizar el proceso de delete
+        /// de multiplex registros de la tabla configurada en el repositorio generico
+        /// </summary>
+        /// <param name="entity">Entidad a Eliminar</param>
         public virtual void DeleteRange(IEnumerable<T> entities)
         {
             Check(entities);
@@ -58,6 +74,11 @@ namespace MainSoft.TravelBackOffice.Application.Base
             return await _repository.GetByIdAsync(id);
         }
 
+        /// <summary>
+        /// Metodo encargado de realizar el proceso de creacion
+        /// de registros de la tabla configurada en el repositorio generico
+        /// </summary>
+        /// <param name="entity">Entidad a insertar</param>
         public virtual void Insert(T entity)
         {
             Check(entity);
@@ -65,6 +86,11 @@ namespace MainSoft.TravelBackOffice.Application.Base
             _repository.Insert(entity);
         }
 
+        /// <summary>
+        /// Metodo encargado de realizar el proceso de insercion de 
+        /// multiplex registros de la tabla configurada en el repositorio generico
+        /// </summary>
+        /// <param name="entity">lustado de registros a insertar</param>
         public virtual void InsertRange(IEnumerable<T> entities)
         {
             Check(entities);

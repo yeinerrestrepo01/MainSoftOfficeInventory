@@ -5,12 +5,29 @@ namespace MainSoft.TravelBackOffice.Application.Base
 {
     public interface IEntityManager<T> where T : class
     {
+        /// <summary>
+        /// Meotodo para realizar la confirmacion de la transaccion de la base de datos realiza
+        /// </summary>
         void Commit();
 
+        /// <summary>
+        /// Meotodo para realizar la confirmacion de la transaccion de la base de datos realiza
+        /// de manera asincrona
+        /// </summary>
         Task CommitAsync();
 
+        /// <summary>
+        /// Metodo encargado de realizar el proceso de delete
+        /// de item de la tabla configurada en el repositorio generico
+        /// </summary>
+        /// <param name="entity">Entidad a Eliminar</param>
         void Delete(T entity);
 
+        /// <summary>
+        /// Metodo encargado de realizar el proceso de delete
+        /// de multiplex registros de la tabla configurada en el repositorio generico
+        /// </summary>
+        /// <param name="entity">Entidad a Eliminar</param>
         void DeleteRange(IEnumerable<T> entities);
 
         IQueryable<T> GetAll();

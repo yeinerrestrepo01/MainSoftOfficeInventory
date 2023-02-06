@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MainSoft.TravelBackOffice.Application.Core;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,11 +10,25 @@ namespace MainSoft.TravelBackOffice.InventoryApi.Controllers
     [ApiController]
     public class AutoresController : ControllerBase
     {
+        /// <summary>
+        /// Propiedad de navegacion de interface de definiciones de AutoresManager
+        /// </summary>
+        private readonly IAutoresManager _autoresManager;
+
+        /// <summary>
+        /// Inicializador de controlador <controller>AutoresController</controller>
+        /// </summary>
+        /// <param name="autoresManager"></param>
+        public AutoresController(IAutoresManager autoresManager)
+        {
+            _autoresManager = autoresManager;
+        }
         // GET: api/<AutoresController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            var listadoAutores = _autoresManager.GetAll().ToList();
+            return Ok(listadoAutores);
         }
 
         // GET api/<AutoresController>/5

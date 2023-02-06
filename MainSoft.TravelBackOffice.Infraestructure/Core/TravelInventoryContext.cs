@@ -1,6 +1,8 @@
 ﻿using MainSoft.TravelBackOffice.Entities.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer.Infrastructure.Internal;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 
 namespace MainSoft.TravelBackOffice.Infraestructure.Core
 {
@@ -30,8 +32,9 @@ namespace MainSoft.TravelBackOffice.Infraestructure.Core
         public DbSet<Libros> Libros { get; set; }
         public DbSet<Editoriales> Editoriales { get; set; }
         public DbSet<Autores> Autores { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+           
         }
 
         protected override void OnModelCreating(ModelBuilder builder)

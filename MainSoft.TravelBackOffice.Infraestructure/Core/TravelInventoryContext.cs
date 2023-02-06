@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MainSoft.TravelBackOffice.Entities.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System.Reflection;
 
 namespace MainSoft.TravelBackOffice.Infraestructure.Core
 {
@@ -27,7 +27,9 @@ namespace MainSoft.TravelBackOffice.Infraestructure.Core
             Configuration = configuration;
         }
 
-        //public DbSet<PuntosComercio> PuntosComercio { get; set; }
+        public DbSet<Libros> Libros { get; set; }
+        public DbSet<Editoriales> Editoriales { get; set; }
+        public DbSet<Autores> Autores { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
         }

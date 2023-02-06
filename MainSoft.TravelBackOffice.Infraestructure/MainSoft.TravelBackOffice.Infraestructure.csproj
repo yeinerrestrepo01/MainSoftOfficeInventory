@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MainSoft.TravelBackOffice.Entities\MainSoft.TravelBackOffice.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

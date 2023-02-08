@@ -27,7 +27,12 @@ namespace MainSoft.TravelBackOffice.Application.Core.Implementation
         /// <returns>LibrosDto</returns>
         public LibrosDto ObtenerLibroIsbnId(int isbnId)
         {
-            throw new NotImplementedException();
+            var libroAutores = GetAll().Where(y=> y.IsbnLibro== isbnId)
+                .Include(i=> i.Libros)
+                .Include(y => y.Autores)
+                .Include(e => e.Libros.Editoriales).
+           Select(s => AutoresLibrosDto.GetLibrosDto(s)).FirstOrDefault();
+            return libroAutores?? new LibrosDto();
         }
 
         /// <summary>

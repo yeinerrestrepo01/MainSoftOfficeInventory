@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainSoft.TravelBackOffice.InventoryApi", "MainSoft.TravelBackOffice.inventory\MainSoft.TravelBackOffice.InventoryApi.csproj", "{DC60C4B9-5840-4FB0-B36C-EFC2EF446C4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainSoft.TravelBackOffice.InventoryApi", "MainSoft.TravelBackOffice.inventory\MainSoft.TravelBackOffice.InventoryApi.csproj", "{DC60C4B9-5840-4FB0-B36C-EFC2EF446C4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainSoft.TravelBackOffice.Infraestructure", "MainSoft.TravelBackOffice.Infraestructure\MainSoft.TravelBackOffice.Infraestructure.csproj", "{752C638B-61AB-41CD-8D1C-85E943E282C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainSoft.TravelBackOffice.Infraestructure", "MainSoft.TravelBackOffice.Infraestructure\MainSoft.TravelBackOffice.Infraestructure.csproj", "{752C638B-61AB-41CD-8D1C-85E943E282C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainSoft.TravelBackOffice.Application", "MainSoft.TravelBackOffice.Application\MainSoft.TravelBackOffice.Application.csproj", "{956E6589-1F4D-4663-A1F5-4537AE5CD7EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainSoft.TravelBackOffice.Application", "MainSoft.TravelBackOffice.Application\MainSoft.TravelBackOffice.Application.csproj", "{956E6589-1F4D-4663-A1F5-4537AE5CD7EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainSoft.TravelBackOffice.Entities", "MainSoft.TravelBackOffice.Entities\MainSoft.TravelBackOffice.Entities.csproj", "{3D33BC24-B53E-4FDD-9500-4000A28FA57C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainSoft.TravelBackOffice.Entities", "MainSoft.TravelBackOffice.Entities\MainSoft.TravelBackOffice.Entities.csproj", "{3D33BC24-B53E-4FDD-9500-4000A28FA57C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mainsonft.TravelBackOffice.UnitTest", "Mainsonft.TravelBackOffice.UnitTest\Mainsonft.TravelBackOffice.UnitTest.csproj", "{3CCB7DCB-217C-4F5A-B5BC-A9FC182E4D82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3D33BC24-B53E-4FDD-9500-4000A28FA57C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D33BC24-B53E-4FDD-9500-4000A28FA57C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D33BC24-B53E-4FDD-9500-4000A28FA57C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CCB7DCB-217C-4F5A-B5BC-A9FC182E4D82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CCB7DCB-217C-4F5A-B5BC-A9FC182E4D82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CCB7DCB-217C-4F5A-B5BC-A9FC182E4D82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CCB7DCB-217C-4F5A-B5BC-A9FC182E4D82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

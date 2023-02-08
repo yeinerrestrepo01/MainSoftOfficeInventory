@@ -33,9 +33,10 @@ namespace MainSoft.TravelBackOffice.InventoryApi.Controllers
 
         // GET api/<AutoresController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            var autor = _autoresManager.Get(t=> t.Id == id).ToList();
+            return Ok(autor);
         }
 
         // POST api/<AutoresController>

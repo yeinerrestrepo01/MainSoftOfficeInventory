@@ -23,27 +23,16 @@ namespace MainSoft.TravelBackOffice.InventoryApi.Controllers
         }
 
         // GET api/<AutoresLibrosController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{isbnId}")]
+        public IActionResult Get(int isbnId)
         {
-            return "value";
+            var AutoreLibros = _autoresLibros.ObtenerLibroIsbnId(isbnId);
+            return Ok(AutoreLibros);
         }
 
         // POST api/<AutoresLibrosController>
         [HttpPost]
         public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<AutoresLibrosController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<AutoresLibrosController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
         {
         }
     }

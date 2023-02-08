@@ -35,6 +35,8 @@ namespace Leal.Core.CargaPuntos.Application.WepApi
 
             services.AddTransient<IAutoresManager, AutoresManager>();
             services.AddTransient<IEditorialesManager, EditorialesManager>();
+            services.AddTransient<ILibrosManager, LibrosManager>();
+            services.AddTransient<IAutoresLibrosManager, AutoresLibrosManager>();
 
         }
     }

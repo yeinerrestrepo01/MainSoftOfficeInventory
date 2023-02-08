@@ -43,17 +43,5 @@ namespace MainSoft.TravelBackOffice.InventoryApi.Controllers
         public void Post([FromBody] string value)
         {
         }
-
-        // PUT api/<AutoresController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<AutoresController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

@@ -1,3 +1,4 @@
+using AutoMapper;
 using Leal.Core.CargaPuntos.Application.WepApi;
 using MainSoft.TravelBackOffice.Infraestructure.Core;
 using Microsoft.EntityFrameworkCore;
@@ -27,7 +28,10 @@ builder.Services.AddSwaggerGen(swagger =>
         Contact = contact
 
     });
+
 });
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddCors();
 StartUp.RegisterDI<TravelInventoryContext>(builder.Services, builder.Configuration);
 var app = builder.Build();
 
@@ -37,6 +41,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+// Shows UseCors with CorsPolicyBuilder.
+app.UseCors(builder =>
+{
+    builder.AllowAnyOrigin()
+           .AllowAnyMethod()
+           .AllowAnyHeader();
+});
 
 app.UseHttpsRedirection();
 

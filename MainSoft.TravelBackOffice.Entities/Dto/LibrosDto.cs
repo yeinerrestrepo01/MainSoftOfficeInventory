@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MainSoft.TravelBackOffice.Entities.Models;
 
 namespace MainSoft.TravelBackOffice.Entities.Dto
 {
@@ -19,6 +14,7 @@ namespace MainSoft.TravelBackOffice.Entities.Dto
         public string? NombreEditorial { get; set; }
         public string? Titulo { get; set; }
         public string? Sinopsis { get; set; }
+        public string? SedeEditorial { get; set; }
         public int NPaginas { get; set; }
     }
 }

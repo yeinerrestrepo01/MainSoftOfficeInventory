@@ -18,15 +18,16 @@ namespace MainSoft.TravelBackOffice.InventoryApi.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var listLibros = _librosManager.ObtenerListadoLibros();
+            var listLibros = _librosManager.GetAll();
             return Ok(listLibros);
         }
 
         // GET api/<LibrosController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{isbnId}")]
+        public IActionResult Get(int isbnId)
         {
-            return "value";
+            var informacionLibro = _librosManager.GetById(isbnId);
+            return Ok(informacionLibro);
         }
 
         // POST api/<LibrosController>

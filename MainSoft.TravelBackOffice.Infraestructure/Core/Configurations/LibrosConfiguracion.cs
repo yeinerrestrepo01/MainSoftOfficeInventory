@@ -10,6 +10,7 @@ namespace MainSoft.TravelBackOffice.Infraestructure.Core.Configurations
         {
             builder.ToTable("Libros", schema);
             builder.HasKey(p => new { p.Isbn });
+
             builder.Property(p => p.Id).HasColumnName("Id");
             builder.Property(p => p.EditorialId).HasColumnName("EditorialId");
             builder.Property(p => p.Titulo).HasColumnName("Titulo");

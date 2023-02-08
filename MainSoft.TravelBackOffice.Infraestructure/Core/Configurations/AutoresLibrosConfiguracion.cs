@@ -14,8 +14,8 @@ namespace MainSoft.TravelBackOffice.Infraestructure.Core.Configurations
             builder.Property(p => p.IsbnLibro).HasColumnName("IsbnLibro");
             builder.Property(p => p.AutorId).HasColumnName("AutorId");
 
-            builder.HasOne(p => p.Libros).WithMany().HasForeignKey("IsbnLibro");
-            builder.HasOne(p => p.Autores).WithMany().HasForeignKey("AutorId");
+            builder.HasOne(p => p.Libros).WithMany(s=> s.AutoresLibros).HasForeignKey("IsbnLibro");
+            builder.HasOne(p => p.Autores).WithMany(t=> t.AutoresLibros).HasForeignKey("AutorId");
         }
     }
 }

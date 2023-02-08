@@ -28,15 +28,5 @@ namespace MainSoft.TravelBackOffice.Application.Core.Implementation
             _autoresLibrosManager = autoresLibrosManager;   
         }
 
-        /// <summary>
-        /// Metodo para obtener el listado de libros actuales almacenados en la tabla libros y editorial asociada.
-        /// </summary>
-        /// <returns>listado de libros</returns>
-        public List<LibrosDto> ObtenerListadoLibros()
-        {
-            var librosaut = _autoresLibrosManager.Get(includes: t => t.Include(i => i.Libros).Include(y => y.Autores)).ToList();
-            var result = Get(includes: t => t.Include(r => r.Editoriales)).ToList();
-            return new List<LibrosDto>();
-        }
     }
 }

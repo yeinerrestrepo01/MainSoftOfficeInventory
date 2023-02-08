@@ -18,5 +18,6 @@ namespace MainSoft.TravelBackOffice.Entities.Models
         public string? Sinopsis { get; set; }
         public int NPaginas { get; set; }
         public virtual Editoriales Editoriales { get; set; }
+        public virtual List<AutoresLibros> AutoresLibros { get; set; } = new List<AutoresLibros>();
     }
 }

@@ -1,4 +1,3 @@
-using AutoMapper;
 using Leal.Core.CargaPuntos.Application.WepApi;
 using MainSoft.TravelBackOffice.Infraestructure.Core;
 using Microsoft.EntityFrameworkCore;

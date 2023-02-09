@@ -1,5 +1,7 @@
 ﻿using MainSoft.TravelBackOffice.Application.Base;
+using MainSoft.TravelBackOffice.Entities.Dto;
 using MainSoft.TravelBackOffice.Entities.Models;
+using MainSoft.TravelBackOffice.Entities.Request;
 
 namespace MainSoft.TravelBackOffice.Application.Core
 {
@@ -8,6 +10,11 @@ namespace MainSoft.TravelBackOffice.Application.Core
     /// </summary>
     public interface IAutoresManager : IEntityManager<Autores>
     {
-
+        /// <summary>
+        /// Metodo para realizar la creacion de los registros en la tabla de autores
+        /// </summary>
+        /// <param name="autoresRequest"></param>
+        /// <returns>RespuestaGenerica</returns>
+        RespuestaGenerica<bool> InsertarAutor(AutoresRequest autoresRequest);
     }
 }

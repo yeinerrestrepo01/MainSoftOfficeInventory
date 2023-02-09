@@ -1,4 +1,5 @@
 ﻿using MainSoft.TravelBackOffice.Application.Core;
+using MainSoft.TravelBackOffice.Entities.Request;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 
@@ -41,8 +42,10 @@ namespace MainSoft.TravelBackOffice.InventoryApi.Controllers
 
         // POST api/<AutoresController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody] AutoresRequest value)
         {
+            var resultadoTransaccion = _autoresManager.InsertarAutor(value);
+            return Ok(resultadoTransaccion);
         }
     }
 }

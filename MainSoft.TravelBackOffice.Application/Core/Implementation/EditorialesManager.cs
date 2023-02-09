@@ -38,7 +38,7 @@ namespace MainSoft.TravelBackOffice.Application.Core.Implementation
         {
             var mapEditoriales = _mapper.Map<Editoriales>(requestEditoriales);
             Insert(mapEditoriales);
-            Commit();
+            _unitOfWork.Commit();
             return _respuestaGenerica;
         }
     }

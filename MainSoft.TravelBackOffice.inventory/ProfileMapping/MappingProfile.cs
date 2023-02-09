@@ -10,6 +10,7 @@ namespace MainSoft.TravelBackOffice.InventoryApi.ProfileMapping
         {
             this.CreateMap<LibrosRequest, Libros>();
             this.CreateMap<AutoresRequest, Autores>();
+            this.CreateMap<RequestEditoriales, Editoriales>();
         }
     }
 }

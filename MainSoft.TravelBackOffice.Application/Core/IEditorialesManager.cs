@@ -1,5 +1,7 @@
 ﻿using MainSoft.TravelBackOffice.Application.Base;
+using MainSoft.TravelBackOffice.Entities.Dto;
 using MainSoft.TravelBackOffice.Entities.Models;
+using MainSoft.TravelBackOffice.Entities.Request;
 
 namespace MainSoft.TravelBackOffice.Application.Core
 {
@@ -8,5 +10,11 @@ namespace MainSoft.TravelBackOffice.Application.Core
     /// </summary>
     public interface IEditorialesManager : IEntityManager<Editoriales>
     {
+        /// <summary>
+        /// Metodo para realizar la creacion de los registros de las editoriales
+        /// </summary>
+        /// <param name="requestEditoriales"></param>
+        /// <returns></returns>
+        RespuestaGenerica<bool> InsertarEditorial(RequestEditoriales requestEditoriales);
     }
 }

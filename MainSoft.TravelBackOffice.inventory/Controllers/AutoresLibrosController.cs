@@ -29,11 +29,5 @@ namespace MainSoft.TravelBackOffice.InventoryApi.Controllers
             var AutoreLibros = _autoresLibros.ObtenerLibroIsbnId(isbnId);
             return Ok(AutoreLibros);
         }
-
-        // POST api/<AutoresLibrosController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
     }
 }
